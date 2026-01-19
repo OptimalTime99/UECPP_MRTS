@@ -15,7 +15,6 @@ class RACEINTOTHESHADOW_API ARITSPlayerController : public APlayerController
 public:
     ARITSPlayerController();
 
-protected:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
     UInputMappingContext* InputMappingContext;
 
@@ -31,5 +30,6 @@ protected:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
     UInputAction* LookAction;
 
+protected:
     virtual void BeginPlay() override;
 };
