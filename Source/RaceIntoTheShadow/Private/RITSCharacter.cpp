@@ -93,15 +93,6 @@ void ARITSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
     }
 }
 
-void ARITSCharacter::PostInitializeComponents()
-{
-	Super::PostInitializeComponents();
-
-    
-}
-
-
-
 void ARITSCharacter::Move(const FInputActionValue& value)
 {
     if (!Controller) return;
