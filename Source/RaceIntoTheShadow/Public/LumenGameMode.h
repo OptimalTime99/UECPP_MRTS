@@ -8,5 +8,8 @@ UCLASS()
 class RACEINTOTHESHADOW_API ALumenGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
+
+public:
+	ALumenGameMode();
 	
 };
