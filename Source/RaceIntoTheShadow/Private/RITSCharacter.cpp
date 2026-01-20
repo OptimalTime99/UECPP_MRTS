@@ -6,6 +6,8 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "UObject/ConstructorHelpers.h"
+#include "LumenGameMode.h"
+#include "Kismet/GameplayStatics.h"
 
 ARITSCharacter::ARITSCharacter()
 {
@@ -90,6 +92,20 @@ void ARITSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
                 );
             }
         }
+    }
+}
+
+void ARITSCharacter::FellOutOfWorld(const UDamageType& dmgType)
+{
+    ALumenGameMode* GM = Cast<ALumenGameMode>(GetWorld()->GetAuthGameMode());
+
+    if (GM)
+    {
+        GM->RequestRespawn(Cast<ARITSPlayerController>(GetController()));
+    }
+    else
+    {
+        Super::FellOutOfWorld(dmgType);
     }
 }
 

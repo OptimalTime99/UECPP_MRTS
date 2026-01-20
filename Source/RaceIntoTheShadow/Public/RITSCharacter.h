@@ -25,6 +25,8 @@ protected:
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+    virtual void FellOutOfWorld(const class UDamageType& dmgType) override;
+
     // 이동 입력 처리 함수
     UFUNCTION()
     void Move(const FInputActionValue& value);
