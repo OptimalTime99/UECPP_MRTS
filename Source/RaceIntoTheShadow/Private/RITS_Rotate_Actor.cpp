@@ -28,7 +28,7 @@ void ARITS_Rotate_Actor::Tick(float DeltaTime)
 		RotateValue *= -1.0f;
 	}
 
-	FRotator NewRotation = FRotator(0.0f, RotateValue, 0.0f);
+	FRotator NewRotation = FRotator(0.0f, 0.0f, RotateValue);
 
 	AddActorLocalRotation(NewRotation);
 }

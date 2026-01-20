@@ -23,7 +23,7 @@ protected:
 	UStaticMeshComponent* StaticMeshComp;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rotation")
-	float RotationSpeed = 60.0f;
+	float RotationSpeed = 40.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rotation")
 	bool bReverseRotation = false;
